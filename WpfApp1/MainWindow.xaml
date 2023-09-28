@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:WpfApp1"
         xmlns:kb="clr-namespace:KeyBoard;assembly=KeyBoard"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Focusable="False">
+        Title="MainWindow" Height="450" Width="800" Focusable="False" Loaded="Window_Loaded">
     <Window.Resources>
         <SolidColorBrush x:Key="TextBox.Static.Border" Color="#FFABAdB3"/>
         <SolidColorBrush x:Key="TextBox.MouseOver.Border" Color="#FF7EB4EA"/>

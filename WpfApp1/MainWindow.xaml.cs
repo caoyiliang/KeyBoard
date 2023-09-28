@@ -13,8 +13,10 @@ namespace WpfApp1
             DataContext = this;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            KeyBoard.KeyBoard keyBoard = new KeyBoard.KeyBoard();
+            keyBoard.Show();
         }
     }
 }
