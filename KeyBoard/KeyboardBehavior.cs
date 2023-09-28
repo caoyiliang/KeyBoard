@@ -9,8 +9,6 @@ namespace KeyBoard
 {
     public class KeyboardBehavior : Behavior<Control>
     {
-
-
         public bool Show
         {
             get { return (bool)GetValue(ShowProperty); }
@@ -20,7 +18,15 @@ namespace KeyBoard
         public static readonly DependencyProperty ShowProperty =
             DependencyProperty.Register("Show", typeof(bool), typeof(KeyboardBehavior), new PropertyMetadata(default));
 
+        public bool Q9
+        {
+            get { return (bool)GetValue(Q9Property); }
+            set { SetValue(Q9Property, value); }
+        }
 
+        // Using a DependencyProperty as the backing store for Q9.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty Q9Property =
+            DependencyProperty.Register("Q9", typeof(bool), typeof(KeyboardBehavior), new PropertyMetadata(default));
 
         /// <summary>
         /// 触发键盘的控件所在的容器
@@ -72,9 +78,18 @@ namespace KeyBoard
                     return;
                 }
                 Panel.Children.Add(popup);
-                var keyboard = new Qwerty();
-                keyboard.ClosedEvent += Keyboard_ClosedEvent;
-                popup.Child = keyboard;
+                if (Q9)
+                {
+                    var keyboard = new Q9();
+                    keyboard.ClosedEvent += Keyboard_ClosedEvent;
+                    popup.Child = keyboard;
+                }
+                else
+                {
+                    var keyboard = new Qwerty();
+                    keyboard.ClosedEvent += Keyboard_ClosedEvent;
+                    popup.Child = keyboard;
+                }
                 popup.IsOpen = true;
                 popup.StaysOpen = true;
                 popup.Placement = PlacementMode.Bottom;

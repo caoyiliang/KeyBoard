@@ -6,10 +6,10 @@
              xmlns:b="http://schemas.microsoft.com/xaml/behaviors"
              xmlns:local="clr-namespace:KeyBoard"
              mc:Ignorable="d" 
-             d:DataContext="{d:DesignInstance Type=local:QwertyViewModel}"
-             Height="220" Width="710" Focusable="False">
+             d:DataContext="{d:DesignInstance Type=local:KbViewModel}"
+             Height="250" Width="750" Focusable="False">
     <UserControl.DataContext>
-        <local:QwertyViewModel/>
+        <local:KbViewModel/>
     </UserControl.DataContext>
     <UserControl.Resources>
         <local:MultiConverter x:Key="multiConverter"/>
@@ -96,7 +96,7 @@
         </Style>
     </UserControl.Resources>
     <Grid>
-        <Grid Margin="2,10,10,0">
+        <Grid Margin="2,10,10,2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.7*"/>
                 <RowDefinition/>

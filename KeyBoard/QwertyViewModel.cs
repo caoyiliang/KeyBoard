@@ -7,7 +7,7 @@ using System.Windows.Input;
 
 namespace KeyBoard
 {
-    partial class QwertyViewModel : ObservableObject
+    partial class KbViewModel : ObservableObject
     {
         // 导入Windows API函数
         [DllImport("user32.dll")]
@@ -26,7 +26,7 @@ namespace KeyBoard
         [ObservableProperty]
         private bool _isCapsLock;
 
-        public QwertyViewModel()
+        public KbViewModel()
         {
             IsCapsLock = GetCapsLockState();
         }

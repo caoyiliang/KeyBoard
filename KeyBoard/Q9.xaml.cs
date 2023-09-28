@@ -1,17 +1,28 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
 namespace KeyBoard
 {
     /// <summary>
-    /// Qwerty.xaml 的交互逻辑
+    /// Q9.xaml 的交互逻辑
     /// </summary>
-    public partial class Qwerty : UserControl
+    public partial class Q9 : UserControl
     {
-        static double w = 750;
-        static double h = 250;
-        public Qwerty()
+        static double w = 300;
+        static double h = 180;
+        public Q9()
         {
             InitializeComponent();
             Width = w;

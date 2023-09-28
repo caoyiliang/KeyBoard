@@ -29,7 +29,7 @@
                         <Border x:Name="border" Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" SnapsToDevicePixels="True">
                             <ScrollViewer x:Name="PART_ContentHost" Focusable="false" HorizontalScrollBarVisibility="Hidden" VerticalScrollBarVisibility="Hidden">
                                 <b:Interaction.Behaviors>
-                                    <kb:KeyboardBehavior Show="{Binding Path=(kb:KeyBoardAttribute.Show),RelativeSource={RelativeSource AncestorType=TextBox}}"/>
+                                    <kb:KeyboardBehavior Show="{Binding Path=(kb:KeyBoardAttribute.Show),RelativeSource={RelativeSource AncestorType=TextBox}}" Q9="{Binding Path=(kb:KeyBoardAttribute.Q9),RelativeSource={RelativeSource AncestorType=TextBox}}" />
                                 </b:Interaction.Behaviors>
                             </ScrollViewer>
                         </Border>
@@ -60,6 +60,6 @@
         </Style>
     </Window.Resources>
     <Grid>
-        <TextBox Width="100" Height="30" kb:KeyBoardAttribute.Show="True"/>
+        <TextBox Width="100" Height="30" kb:KeyBoardAttribute.Show="True" kb:KeyBoardAttribute.Q9="True"/>
     </Grid>
 </Window>
