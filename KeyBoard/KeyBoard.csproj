@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>net7.0-windows;net8.0-windows</TargetFrameworks>
+    <TargetFrameworks>net9.0-windows;net8.0-windows</TargetFrameworks>
     <Nullable>enable</Nullable>
     <UseWPF>true</UseWPF>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
@@ -12,7 +12,7 @@
     <RepositoryUrl>https://github.com/caoyiliang/KeyBoard</RepositoryUrl>
     <PackageIcon>logo.png</PackageIcon>
     <Version>4.0.0</Version>
-    <PackageReleaseNotes>支持.net8</PackageReleaseNotes>
+    <PackageReleaseNotes>支持.net9</PackageReleaseNotes>
     <Description>键盘</Description>
   </PropertyGroup>
 
@@ -24,8 +24,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
-    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.77" />
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.0" />
+    <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.135" />
   </ItemGroup>
 
 </Project>
