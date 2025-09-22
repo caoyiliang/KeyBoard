@@ -24,9 +24,18 @@ namespace KeyBoard
             set { SetValue(Q9Property, value); }
         }
 
-        // Using a DependencyProperty as the backing store for Q9.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty Q9Property =
             DependencyProperty.Register("Q9", typeof(bool), typeof(KeyboardBehavior), new PropertyMetadata(default));
+
+        public Brush Background
+        {
+            get { return (Brush)GetValue(BackgroundProperty); }
+            set { SetValue(BackgroundProperty, value); }
+        }
+
+        public static readonly DependencyProperty BackgroundProperty =
+            DependencyProperty.Register("Background", typeof(Brush), typeof(KeyboardBehavior), new PropertyMetadata(new SolidColorBrush(Colors.Transparent)));
+
 
         /// <summary>
         /// 触发键盘的控件所在的容器
@@ -38,7 +47,7 @@ namespace KeyBoard
         public KeyboardBehavior()
         {
             popup.AllowsTransparency = true;
-            popup.AllowDrop = true;
+            popup.AllowDrop = false;
         }
 
         protected override void OnAttached()
@@ -81,12 +90,14 @@ namespace KeyBoard
                 if (Q9)
                 {
                     var keyboard = new Q9();
+                    ((KbViewModel)keyboard.DataContext).Background = Background;
                     keyboard.ClosedEvent += Keyboard_ClosedEvent;
                     popup.Child = keyboard;
                 }
                 else
                 {
                     var keyboard = new Qwerty();
+                    ((KbViewModel)keyboard.DataContext).Background = Background;
                     keyboard.ClosedEvent += Keyboard_ClosedEvent;
                     popup.Child = keyboard;
                 }

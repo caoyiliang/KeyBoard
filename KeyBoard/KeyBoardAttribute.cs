@@ -1,4 +1,5 @@
 ﻿using System.Windows;
+using System.Windows.Media;
 
 namespace KeyBoard
 {
@@ -18,7 +19,6 @@ namespace KeyBoard
             DependencyProperty.RegisterAttached("Show", typeof(bool), typeof(KeyBoardAttribute), new PropertyMetadata(default));
 
 
-
         public static bool GetQ9(DependencyObject obj)
         {
             return (bool)obj.GetValue(Q9Property);
@@ -29,10 +29,22 @@ namespace KeyBoard
             obj.SetValue(Q9Property, value);
         }
 
-        // Using a DependencyProperty as the backing store for Q9.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty Q9Property =
             DependencyProperty.RegisterAttached("Q9", typeof(bool), typeof(KeyBoardAttribute), new PropertyMetadata(default));
 
+
+        public static Brush GetBackground(DependencyObject obj)
+        {
+            return (Brush)obj.GetValue(BackgroundProperty);
+        }
+
+        public static void SetBackground(DependencyObject obj, Brush value)
+        {
+            obj.SetValue(BackgroundProperty, value);
+        }
+
+        public static readonly DependencyProperty BackgroundProperty =
+            DependencyProperty.RegisterAttached("Background", typeof(Brush), typeof(KeyBoardAttribute), new PropertyMetadata(new SolidColorBrush(Colors.Transparent)));
 
     }
 }

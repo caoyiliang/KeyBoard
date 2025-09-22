@@ -39,7 +39,7 @@
         </Style>
     </UserControl.Resources>
     <Grid>
-        <Grid Margin="2,10,10,2">
+        <Grid Background="{Binding Background}" Margin="2,10,10,2">
             <Grid.RowDefinitions>
                 <RowDefinition/>
                 <RowDefinition/>

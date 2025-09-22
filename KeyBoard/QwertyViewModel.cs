@@ -4,6 +4,7 @@ using System;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using System.Windows.Media;
 
 namespace KeyBoard
 {
@@ -25,6 +26,9 @@ namespace KeyBoard
 
         [ObservableProperty]
         private bool _isCapsLock;
+
+        [ObservableProperty]
+        private Brush _background = new SolidColorBrush(Colors.Transparent);
 
         public KbViewModel()
         {

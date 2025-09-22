@@ -45,7 +45,7 @@
             <Setter Property="Background" Value="White"/>
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="BorderBrush" Value="Gray"/>
-            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Margin" Value="1"/>
             <Setter Property="Command" Value="{Binding KeyPassCommand}"/>
             <Setter Property="Template">
                 <Setter.Value>
@@ -71,7 +71,7 @@
             <Setter Property="Background" Value="White"/>
             <Setter Property="Foreground" Value="Black"/>
             <Setter Property="BorderBrush" Value="Gray"/>
-            <Setter Property="Margin" Value="2"/>
+            <Setter Property="Margin" Value="1"/>
             <Setter Property="Command" Value="{Binding TogglePassCommand}"/>
             <Setter Property="Template">
                 <Setter.Value>
@@ -81,8 +81,8 @@
                         </Border>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsChecked" Value="True">
-                                <Setter TargetName="border" Property="Background" Value="White" />
-                                <Setter Property="Foreground" Value="{Binding BorderBrush, RelativeSource={RelativeSource Mode=Self}}"/>
+                                <Setter TargetName="border" Property="Background" Value="#C1272D" />
+                                <Setter Property="Foreground" Value="{Binding Background, RelativeSource={RelativeSource Mode=Self}}"/>
                             </Trigger>
                             <Trigger Property="IsEnabled" Value="False">
                                 <Setter Property="Background" Value="LightGray"/>
