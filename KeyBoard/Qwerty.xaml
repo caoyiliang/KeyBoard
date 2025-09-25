@@ -247,7 +247,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition Width="2*"/>
                 </Grid.ColumnDefinitions>
-                <ToggleButton x:Name="shift" Content="Shift">
+                <ToggleButton x:Name="shift" Content="Shift" IsChecked="{Binding IsShiftPressed}">
                     <ToggleButton.CommandParameter>
                         <MultiBinding Converter="{StaticResource multiConverter}">
                             <Binding Source="{x:Static Key.LeftShift}"/>
@@ -266,7 +266,7 @@
                 <Button Style="{StaticResource shiftButton}" Content="." Tag="&#x003C;" CommandParameter="{x:Static Key.OemPeriod}" Grid.Column="9"/>
                 <Button Style="{StaticResource shiftButton}" Content="/" Tag="&#x003E;" CommandParameter="{x:Static Key.Oem2}" Grid.Column="10"/>
                 <Button Content="↑" CommandParameter="{x:Static Key.Up}" Grid.Column="11"/>
-                <ToggleButton x:Name="rshift" Content="Shift" Grid.Column="12">
+                <ToggleButton x:Name="rshift" Content="Shift" Grid.Column="12" IsChecked="{Binding IsShiftPressed}">
                     <ToggleButton.CommandParameter>
                         <MultiBinding Converter="{StaticResource multiConverter}">
                             <Binding Source="{x:Static Key.RightShift}"/>
@@ -288,7 +288,7 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <ToggleButton x:Name="ctrl" Content="Ctrl">
+                <ToggleButton x:Name="ctrl" Content="Ctrl" IsChecked="{Binding IsCtrlPressed}">
                     <ToggleButton.CommandParameter>
                         <MultiBinding Converter="{StaticResource multiConverter}">
                             <Binding Source="{x:Static Key.LeftCtrl}"/>
@@ -297,7 +297,7 @@
                     </ToggleButton.CommandParameter>
                 </ToggleButton>
                 <Button Content="Win" CommandParameter="{x:Static Key.LWin}" Grid.Column="1"/>
-                <ToggleButton x:Name="alt" Content="Alt" Grid.Column="2">
+                <ToggleButton x:Name="alt" Content="Alt" Grid.Column="2" IsChecked="{Binding IsAltPressed}">
                     <ToggleButton.CommandParameter>
                         <MultiBinding Converter="{StaticResource multiConverter}">
                             <Binding Source="{x:Static Key.LeftAlt}"/>
@@ -306,7 +306,7 @@
                     </ToggleButton.CommandParameter>
                 </ToggleButton>
                 <Button Content="Space" CommandParameter="{x:Static Key.Space}" Grid.Column="3"/>
-                <ToggleButton x:Name="ralt" Content="Alt" Grid.Column="4">
+                <ToggleButton x:Name="ralt" Content="Alt" Grid.Column="4" IsChecked="{Binding IsAltPressed}">
                     <ToggleButton.CommandParameter>
                         <MultiBinding Converter="{StaticResource multiConverter}">
                             <Binding Source="{x:Static Key.RightAlt}"/>
@@ -318,7 +318,7 @@
                 <Button Content="←" CommandParameter="{x:Static Key.Left}" Grid.Column="6"/>
                 <Button Content="↓" CommandParameter="{x:Static Key.Down}" Grid.Column="7"/>
                 <Button Content="→" CommandParameter="{x:Static Key.Right}" Grid.Column="8"/>
-                <ToggleButton x:Name="rctrl" Content="Ctrl" Grid.Column="9">
+                <ToggleButton x:Name="rctrl" Content="Ctrl" Grid.Column="9" IsChecked="{Binding IsCtrlPressed}">
                     <ToggleButton.CommandParameter>
                         <MultiBinding Converter="{StaticResource multiConverter}">
                             <Binding Source="{x:Static Key.RightCtrl}"/>
